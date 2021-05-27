@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="unit">
+        <item>بالكيلو</item>
+        <item>بالقطعة</item>
+    </string-array>
+    <string-array name="cuttingWays">
+        <item>تنظيف</item>
+        <item>بدون تنظيف</item>
+        <item>للشوي (سنجاري)</item>
+    </string-array>
+</resources>

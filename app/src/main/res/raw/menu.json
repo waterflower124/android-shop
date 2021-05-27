@@ -1,0 +1,42 @@
+[
+  {
+    "name" : "Home",
+    "icon" : "home",
+    "position" : 0
+  },
+  {
+    "name" : "My Orders",
+    "icon" : "menu_fish",
+    "position" : 1
+  },
+  {
+    "name" : "Cart",
+    "icon" : "menu_cart",
+    "position" : 2
+  },
+  {
+    "name" : "Our services",
+    "icon" : "info",
+    "position" : 3
+  },
+  {
+    "name" : "About",
+    "icon" : "info",
+    "position" : 4
+  },
+  {
+    "name" : "Contact us",
+    "icon" : "phone_menu",
+    "position" : 5
+  },
+  {
+    "name" : "Language",
+    "icon" : "logout",
+    "position" : 6
+  },
+  {
+    "name" : "Logout",
+    "icon" : "logout",
+    "position" : 7
+  }
+]

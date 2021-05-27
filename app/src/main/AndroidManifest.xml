@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.anas.fishday">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
+    <application
+        android:name=".app.FishDayApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="" />
+        <activity
+            android:name=".screens.main.activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
+            <intent-filter android:label="PaymentLink" android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https"
+                    android:host="fishday.com.sa"
+                    android:pathPrefix="/ar/cart/appurwaycallback" />
+                <data android:scheme="https"
+                    android:host="fishday.com.sa"
+                    android:pathPrefix="/en/cart/appurwaycallback" />
+                <data android:scheme="https"
+                    android:host="fishday.com.sa"
+                    android:pathPrefix="/cart/appurwaycallback" />
+            </intent-filter>
+            <intent-filter android:label="UniversalLink" android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https"
+                    android:host="fishday.com.sa"
+                    android:pathPrefix="/ar/front/products" />
+                <data android:scheme="https"
+                    android:host="fishday.com.sa"
+                    android:pathPrefix="/en/front/products" />
+                <data android:scheme="https"
+                    android:host="fishday.com.sa"
+                    android:pathPrefix="/front/products" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.login.LoginActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".screens.productdetails.ProductDetailsActivity"
+            android:parentActivityName=".screens.main.activity.MainActivity" />
+        <activity android:name=".screens.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".screens.confirmregister.ConfirmationActivity" />
+        <activity android:name=".screens.register.RegisterActivity" />
+        <activity
+            android:name=".screens.orderstatus.OrderStatusActivity"
+            android:parentActivityName=".screens.main.activity.MainActivity" />
+        <activity android:name=".screens.meter.MeterActivity" />
+        <activity android:name=".screens.servicedetails.ServiceDetailsActivity" />
+        <activity android:name=".screens.ImageViewerActivity" />
+        <activity android:name=".screens.cartactivity.CartActivity"></activity>
+        <receiver android:name="com.appsflyer.SingleInstallBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

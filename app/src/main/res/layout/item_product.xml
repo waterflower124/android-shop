@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="product"
+            type="com.anas.fishday.entities.Product" />
+        <variable
+            name="onProductClickListener"
+            type="com.anas.fishday.screens.main.fragments.home.interfaces.OnProductClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardBackgroundColor="@color/white"
+        android:onClick="@{()->onProductClickListener.onProductClick(product)}">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/productIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:scaleType="fitXY"
+                    loadProductImage="@{product.images}" />
+                <ImageView
+                    android:id="@+id/soldoutIv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/sold_out"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_7sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextPrimary"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:textSize="@dimen/_10ssp"
+                    android:text="@{product.name}" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/kiloLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right">
+
+                        <TextView
+                            android:id="@+id/productKiloCancelPriceTv"
+                            style="@style/TextBlack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_8ssp"
+                            android:text="@{product.origin_Kiloprice}" />
+                        <TextView
+                            android:id="@+id/productPriceTv"
+                            style="@style/TextBlack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:textSize="@dimen/_8ssp"
+                            android:text="@{product.real_Kiloprice}" />
+
+                        <TextView
+                            android:id="@+id/priceUnit"
+                            style="@style/TextBlack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:paddingTop="2dp"
+                            android:textColor="@color/text_light_gray"
+                            android:textSize="@dimen/_8ssp"
+                            android:text="@string/perkg" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pieceLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right">
+
+                        <TextView
+                            android:id="@+id/productPieceCancelPriceTv"
+                            style="@style/TextBlack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_8ssp"
+                            android:text="@{product.origin_Pieceprice}" />
+                        <TextView
+                            android:id="@+id/productPiecePriceTv"
+                            style="@style/TextBlack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:textSize="@dimen/_8ssp"
+                            android:text="@{product.real_Pieceprice}" />
+
+                        <TextView
+                            android:id="@+id/pricePieceUnit"
+                            style="@style/TextBlack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:paddingTop="2dp"
+                            android:textColor="@color/text_light_gray"
+                            android:textSize="@dimen/_8ssp"
+                            android:text="@string/perpc" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/rounded_bg_blue"
+                style="@style/TextWhite"
+                android:textSize="@dimen/_10ssp"
+                android:text="@string/add_to_cart"
+                android:textAllCaps="false"
+                android:onClick="@{()->onProductClickListener.onAddToCartClick(product)}"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

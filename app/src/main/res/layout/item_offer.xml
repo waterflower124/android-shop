@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="offer"
+            type="com.anas.fishday.entities.Offer" />
+        <variable
+            name="onOfferClickListener"
+            type="com.anas.fishday.screens.main.fragments.home.interfaces.OnOfferClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false"
+        android:layout_marginStart="5dp"
+        android:onClick="@{()-> onOfferClickListener.onOfferClick(offer)}">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/offerIv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                loadImage="@{offer.image}"/>
+            <TextView
+                android:id="@+id/offerTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:lines="1"
+                style="@style/TextWhite"
+                android:text="@{offer.text}"/>
+
+            <TextView
+                android:id="@+id/offerPriceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:lines="1"
+                style="@style/TextWhite"
+                android:textSize="@dimen/_10ssp"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

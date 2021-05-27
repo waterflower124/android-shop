@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="productDetails"
+            type="com.anas.fishday.entities.Product" />
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/confirmationCoordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <RelativeLayout
+                        android:id="@+id/backgroundLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp">
+
+                        <ImageView
+                            android:id="@+id/backgroundIv"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_200sdp"
+                            android:background="@drawable/login_image"
+                            android:scaleType="fitXY" />
+
+                        <ImageView
+                            android:id="@+id/logoIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/logo" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/backgroundLayout"
+                        android:layout_marginBottom="-20dp"
+                        android:layout_marginTop="-60dp"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@android:color/transparent">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardPreventCornerOverlap="false">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_6sdp"
+                                    android:background="@color/colorPrimary" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="40dp"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/titleTv"
+                                        style="@style/TextPrimary"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/account_confirmation" />
+
+                                    <TextView
+                                        android:id="@+id/descriptionTv"
+                                        style="@style/TextGray"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center"
+                                        android:text="@string/code_sent" />
+
+                                    <TextView
+                                        android:id="@+id/codeTitleTv"
+                                        style="@style/TextPrimary"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/confirmation_code" />
+
+                                    <com.mukesh.OtpView
+                                        android:id="@+id/otpView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layoutDirection="ltr"
+                                        android:background="@color/white"
+                                        android:inputType="number"
+                                        android:textColor="@color/colorPrimary"
+                                        app:text_background_color="@color/gray"/>
+
+                                    <TextView
+                                        android:id="@+id/confirmationCodeTv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:textColor="@color/colorPrimary"/>
+
+                                    <Button
+                                        android:id="@+id/confirmAccountBtn"
+                                        style="@style/TextWhite"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:layout_marginBottom="@dimen/_30sdp"
+                                        android:layout_marginTop="@dimen/_20sdp"
+                                        android:background="@drawable/curved_bg_blue"
+                                        android:onClick="@{onClickListener::onClick}"
+                                        android:text="@string/confirm_account"
+                                        android:textAllCaps="false" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/priceLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/_30sdp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:gravity="center"
+                                android:orientation="vertical"></LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="productDetails"
+            type="com.anas.fishday.entities.Product" />
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/registerCoordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <RelativeLayout
+                        android:id="@+id/backgroundLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                        <ImageView
+                            android:id="@+id/backgroundIv"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/login_image"
+                            android:scaleType="fitXY" />
+
+                        <ImageView
+                            android:id="@+id/logoIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/logo" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/backgroundLayout"
+                        android:layout_marginTop="-60dp"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@android:color/transparent">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardPreventCornerOverlap="false">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_6sdp"
+                                    android:background="@color/colorPrimary" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="30dp"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/titleTv"
+                                        style="@style/TextPrimaryBold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/app_name" />
+
+                                    <TextView
+                                        android:id="@+id/descriptionTv"
+                                        style="@style/TextGray"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center"
+                                        android:text="@string/you_can_register" />
+
+                                    <TextView
+                                        android:id="@+id/countryTv"
+                                        style="@style/TextPrimary"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_20sdp"
+                                        android:text="@string/country" />
+
+                                    <EditText
+                                        android:id="@+id/countryEt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="start"
+                                        android:inputType="text"
+                                        android:text="@string/ksa"
+                                        android:focusable="false"
+                                        android:clickable="false"/>
+                                    <TextView
+                                        android:id="@+id/cityTv"
+                                        style="@style/TextPrimary"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_20sdp"
+                                        android:text="@string/city" />
+
+                                    <Spinner
+                                        android:id="@+id/citiesSpinner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"/>
+                                    <TextView
+                                        style="@style/TextGray"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:textStyle="italic"
+                                        android:text="@string/many_cities_soon" />
+                                    <TextView
+                                        android:id="@+id/mobileNumberTv"
+                                        style="@style/TextPrimary"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:text="@string/mobile_number" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:text="+966"/>
+                                        <EditText
+                                            android:id="@+id/mobileNumberEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:gravity="start"
+                                            android:inputType="number" />
+                                    </LinearLayout>
+
+
+                                    <!--<TextView-->
+                                        <!--android:id="@+id/passwordTv"-->
+                                        <!--style="@style/TextPrimary"-->
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_marginTop="@dimen/_10sdp"-->
+                                        <!--android:text="@string/password" />-->
+
+                                    <!--<EditText-->
+                                        <!--android:id="@+id/passwordEt"-->
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:gravity="start"-->
+                                        <!--android:inputType="textPassword" />-->
+                                    <Button
+                                        android:id="@+id/registerBtn"
+                                        style="@style/TextWhite"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:layout_marginTop="@dimen/_20sdp"
+                                        android:background="@drawable/curved_bg_blue"
+                                        android:onClick="@{onClickListener::onClick}"
+                                        android:text="@string/register"
+                                        android:textAllCaps="false" />
+
+                                    <Button
+                                        android:id="@+id/goToMarketBtn"
+                                        style="@style/TextPrimary"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:background="@android:color/transparent"
+                                        android:onClick="@{onClickListener::onClick}"
+                                        android:text="@string/go_to_market"
+                                        android:textAllCaps="false" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/priceLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/_30sdp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:gravity="center"
+                                android:orientation="vertical"></LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

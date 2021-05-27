@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">FishDay</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_cart">Settings</string>
+
+
+    <!--          Menu                    -->
+    <string name="home">Home</string>
+    <string name="cart">Cart</string>
+    <string name="my_orders">My Orders</string>
+    <string name="about">About</string>
+    <string name="our_services">Our services</string>
+    <string name="contact">Contact us</string>
+    <string name="logout">Logout</string>
+    <!--          Login                       -->
+
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="login">Login</string>
+    <string name="go_to_market">Go to market ></string>
+    <string name="ksa">Saudi Arabia</string>
+    <!--           Register                   -->
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <!--          Confirmation             -->
+    <string name="account_confirmation">Account Confirmation</string>
+    <!--<string name="code_sent">تم ارسال كود الي رقم الهاتف \nيرجي ادخال الرمز\nهنا</string>-->
+    <string name="code_sent">Code has been sent\nplease write it\nhere</string>
+    <string name="you_can_register">You will receive a confirmation\ncode to verify that is\nyours</string>
+    <string name="confirmation_code">Confirmation code</string>
+    <string name="confirm_account">Confirm account</string>
+
+
+    <string name="categories">Categories</string>
+    <!--             Product details              -->
+    <string name="required_quantity">Required  quantity</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="per_kilo">Per Kilo</string>
+    <string name="per_piece">Per Piece</string>
+    <string name="cancel">Cancel</string>
+    <string name="per_kg">per kg</string>
+    <string name="per_pi">per pc</string>
+    <string name="cutting_ways">Cutting ways</string>
+    <string name="type_of_quantity">Type of quantity</string>
+
+    <!--                    Cart                       -->
+    <string name="total_cost">Total cost</string>
+    <string name="order_now">Order now</string>
+    <string name="sar_format">%s SAR</string>
+    <string name="item_added_to_cart">Item added to cart</string>
+    <string name="complete_order">Complete order</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="get_current_address">Get current address </string>
+    <string name="price">Price: </string>
+    <string name="sar">SAR</string>
+    <string name="order_number">Order number</string>
+    <string name="notes">Notes</string>
+    <!--                   Order status           -->
+    <string name="order_done_successfully">Order has been placed successfully</string>
+    <string name="order_moved_successfully">Order has been moved successfully</string>
+    <string name="order_on_way">Order is on his way to you</string>
+    <string name="order_status">Order status</string>
+    <!--                    Others                    -->
+    <string name="loading">Loading...</string>
+
+    <!--                   Errors                   -->
+    <string name="error_all_fields_required">Please fill all the fields</string>
+    <string name="error_failed_to_get_address">Failed to get address</string>
+    <string name="error_gps_disabled">GPS is disabled, please enable it</string>
+    <string name="error_cart_is_empty">Cart is empty</string>
+    <string name="error_mobile_address_required">Full name and Mobile number, address are required</string>
+    <string name="error_cart_less_than_100">Order cost should be more than 100 SAR</string>
+    <string name="error_already_have_cart">You have already placed an order, you can place a new order after you get the current order</string>
+    <!--                  Loading                 -->
+    <string name="fetching_current_address">Fetching your current address</string>
+
+    <!--                Meter                 -->
+    <string name="meter">Meter</string>
+    <string name="available_fish">Fresh fish available today</string>
+
+
+    <!--                Contact           -->
+    <string name="contact_website">www.fishday.com.sa</string>
+    <string name="contact_tel">920008096</string>
+    <string name="contact_email">info@fishday.com.sa</string>
+    <string name="contact_mobile">0558308096</string>
+
+    <!--                Splash            -->
+    <string name="slogan">From Boat to home</string>
+
+    <string name="about_content">لقد أصبحنا مقتنعين بأن الفوائد الصحية للمأكولات البحرية الطازجة للبشرية مهمة جدا إلى حد كبير فلا نسمح  لممارسات المطاعم والشيف ان يفقدنا الاستمتاع بطعم السمك الطازج بكثره الصلصات والتوابل عليها نحن نريد أن نترك سحر الأسماك مقرون بيوم السمك ,
+البحرهو السمك الطازج ورائحته وهذا هو منتج يوم السمك نحن نقدم خدمة التوصيل من أعلى مستويات الجودة والمعايير نقدم لك: وسيلة مريحة لتشمل خيار صحيا من الأسماك الطازجة، والمأكولات البحرية، وتسليمها لباب منزلك من يوم صيدها من قبل موضفينا بشحن ومعامل التنظيف. لدينا تشكيلة كبيرة من المأكولات جنبا إلى جنب مع فريق من ذوي الخبرة لدينا، وهم يعرفون ما الذي تبحث عنه نحن نقدم الأسماك الطازجة والمأكولات البحرية مباشرة إلى الباب الخاص بك. متجر اسماك  على شبكة الإنترنت، يسمح لك أن تأمر بسرعة وبشكل آمن. للأسماك والمأكولات البحرية
+</string>
+    <string name="many_cities_soon">Many cities soon</string>
+
+    <string name="ok">Ok</string>
+
+    <string name="visa_available">We provide POS machine for payment on delivery</string>
+    <string name="delivery_12_hours">Order will be delivered within 12 hours</string>
+    <string name="account_verified">Account is verified successfully</string>
+
+    <string name="total">Total</string>
+    <string name="delivery">Delivery</string>
+    <string name="sub_total">SubTotal</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="payment_mada">Mada - Visa/Master</string>
+    <string name="payment_cash">Cash on Delivery</string>
+
+    <!--    product  -->
+    <string name="perkg">per kg</string>
+    <string name="perpc">per pc</string>
+
+    <!--  order status  -->
+    <string name="payment_method_mada">Mada</string>
+    <string name="payment_method_cash">Cash</string>
+    <string name="payment_status">Payment Status</string>
+    <string name="payment_status_pending">Pending</string>
+    <string name="payment_status_cancelled">Cancelled</string>
+    <string name="payment_status_paid">Paid</string>
+
+    <!--  payment error  -->
+    <string name="payment_error">Payment of your order is failed. Please try again.</string>
+</resources>

@@ -1,0 +1,42 @@
+[
+  {
+    "name" : "الرئيسية",
+    "icon" : "home",
+    "position" : 0
+  },
+  {
+    "name" : "طلباتي",
+    "icon" : "menu_fish",
+    "position" : 1
+  },
+  {
+    "name" : "العربة",
+    "icon" : "menu_cart",
+    "position" : 2
+  },
+  {
+    "name" : "خدماتنا الاخرى",
+    "icon" : "info",
+    "position" : 3
+  },
+  {
+    "name" : "عننا",
+    "icon" : "info",
+    "position" : 4
+  },
+  {
+    "name" : "اتصل بنا",
+    "icon" : "phone_menu",
+    "position" : 5
+  },
+  {
+    "name" : "اللغة",
+    "icon" : "logout",
+    "position" : 6
+  },
+  {
+    "name" : "خروج",
+    "icon" : "logout",
+    "position" : 7
+  }
+]

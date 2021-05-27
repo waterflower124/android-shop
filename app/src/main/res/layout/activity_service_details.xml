@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="productDetailsOnClickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="productDetails"
+            type="com.anas.fishday.entities.Product" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/productDetailsCoordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolbar">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/imageViewPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"/>
+                        <com.rd.PageIndicatorView
+                            android:id="@+id/pageIndicatorView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="20dp"
+                            app:piv_animationType="slide"
+                            app:piv_dynamicCount="true"
+                            app:piv_interactiveAnimation="true"
+                            app:piv_selectedColor="@color/colorPrimary"
+                            app:piv_unselectedColor="@color/gray"
+                            app:piv_viewPager="@id/imageViewPager" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp">
+
+                            <TextView
+                                android:id="@+id/nameTv"
+                                style="@style/TextPrimary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{productDetails.name}" />
+
+                            <TextView
+                                android:id="@+id/descriptionTv"
+                                style="@style/TextPrimary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/nameTv"
+                                android:layout_marginTop="10dp"
+                                android:text="@{productDetails.description}"
+                                android:textColor="@color/gray" />
+
+
+                            <Button
+                                android:id="@+id/contactBtn"
+                                style="@style/TextWhite"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_below="@id/descriptionTv"
+                                android:layout_marginBottom="@dimen/_30sdp"
+                                android:layout_marginTop="30dp"
+                                android:background="@drawable/rounded_bg_blue"
+                                android:onClick="@{productDetailsOnClickListener::onClick}"
+                                android:text="@string/contact"
+                                android:textAllCaps="false" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

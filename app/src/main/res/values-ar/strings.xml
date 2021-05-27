@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">يوم السمك</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--          Menu                    -->
+    <string name="home">الرئيسية</string>
+    <string name="cart">العربة</string>
+    <string name="my_orders">طلباتي</string>
+    <string name="about">عننا</string>
+    <string name="our_services">خدماتنا الأخرى</string>
+    <string name="contact">اتصل بنا</string>
+    <string name="logout">خروج</string>
+    <!--          Login                       -->
+    <string name="country">الدولة</string>
+    <string name="city">المدينة</string>
+    <string name="mobile_number">رقم الجوال</string>
+    <string name="login">تسجيل دخول</string>
+    <string name="go_to_market">اذهب إلى المتجر مباشرة ></string>
+    <string name="ksa">المملكة العربية السعودية</string>
+    <!--           Register                   -->
+    <string name="register">تسجيل</string>
+    <string name="password">كلمة المرور</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <!--          Confirmation             -->
+    <string name="account_confirmation">تفعيل الحساب</string>
+    <string name="code_sent">تم ارسال كود الي رقم الهاتف \nيرجي ادخال الرمز\nهنا</string>
+    <string name="you_can_register">\nيمكنك التسجيل الان برقم الجوال وسوف\nيصلك كود تفعيلي للتحقق\nمن رقم هاتفك</string>
+    <string name="confirmation_code">كود التفعيل</string>
+    <string name="confirm_account">تفعيل الحساب</string>
+
+    <!--       Home Fragment         -->
+    <string name="fish">اسماكنا</string>
+    <string name="filet">فيليهاتنا</string>
+    <string name="kshrytna">قشرياتنا</string>
+    <string name="other_services">خدماتنا الاخرى</string>
+
+    <string name="categories">الأصناف</string>
+
+    <!--             Product details              -->
+    <string name="required_quantity">الكمية المطلوبة</string>
+    <string name="add_to_cart">اضف إلى العربة</string>
+    <string name="per_kilo">لكل كيلو</string>
+    <string name="per_piece">لكل حبة</string>
+    <string name="cancel">إلغاء</string>
+    <string name="per_kg">لكل كيلو</string>
+    <string name="per_pi">لكل قطعة</string>
+    <string name="cutting_ways">طرق التقطيع</string>
+    <string name="type_of_quantity">نوع الكمية</string>
+
+    <!--                    Cart                       -->
+    <string name="total_cost">التكلفة الكلية</string>
+    <string name="order_now">اطلب الآن</string>
+    <string name="sar_format">%s ريال</string>
+    <string name="item_added_to_cart">تم اضافة المنتج إلى العربة</string>
+    <string name="complete_order">اتمام الطلب</string>
+    <string name="name">الاسم</string>
+    <string name="address">العنوان</string>
+    <string name="get_current_address">اجد العنوان الحالي </string>
+    <string name="price">السعر: </string>
+    <string name="sar">ريال</string>
+    <string name="order_number">رقم الطلب</string>
+    <string name="notes">ملاحظات</string>
+    <string name="error_already_have_cart">انت بالفعل قمت بالطلب .. يمكنك الطلب مرة اخري بعد وصول الطلب الحالي اليك</string>
+    <!--                   Order status           -->
+    <string name="order_done_successfully">تم تسجيل الطلب بنجاح</string>
+    <string name="order_moved_successfully">تم نقل الطلب الي معمل التجهيز</string>
+    <string name="order_on_way">الطلب في طريقة الان اليك</string>
+    <string name="order_status">حالة الطلب</string>
+    <!--                    Others                    -->
+    <string name="loading">جاري التحميل</string>
+
+    <!--                   Errors                   -->
+    <string name="error_all_fields_required">برجاء ادخال جميع البيانات</string>
+    <string name="error_failed_to_get_address">فشل في ايجاد العنوان</string>
+    <string name="error_gps_disabled">GPS is disabled, please enable it</string>
+    <string name="error_cart_is_empty">العربة فارغة</string>
+    <string name="error_mobile_address_required">رقم الجوال والعنوان مطلوبين</string>
+    <string name="error_cart_less_than_100">تكلفة الطلب يجب ان تكون اعلى من 100 ريال</string>
+    <!--                  Loading                 -->
+    <string name="fetching_current_address">جاري ايجاد العنوان الحالي</string>
+
+    <!--                Meter                 -->
+    <string name="meter">العداد</string>
+    <string name="available_fish">كمية الأسماك الطازجة المتوفر حجزها لهذا اليوم</string>
+
+    <!--                Splas            -->
+    <string name="slogan">من البوت إلى البيت</string>
+
+
+    <string name="about_content">لقد أصبحنا مقتنعين بأن الفوائد الصحية للمأكولات البحرية الطازجة للبشرية مهمة جدا إلى حد كبير فلا نسمح  لممارسات المطاعم والشيف ان يفقدنا الاستمتاع بطعم السمك الطازج بكثره الصلصات والتوابل عليها نحن نريد أن نترك سحر الأسماك مقرون بيوم السمك ,
+البحرهو السمك الطازج ورائحته وهذا هو منتج يوم السمك نحن نقدم خدمة التوصيل من أعلى مستويات الجودة والمعايير نقدم لك: وسيلة مريحة لتشمل خيار صحيا من الأسماك الطازجة، والمأكولات البحرية، وتسليمها لباب منزلك من يوم صيدها من قبل موضفينا بشحن ومعامل التنظيف. لدينا تشكيلة كبيرة من المأكولات جنبا إلى جنب مع فريق من ذوي الخبرة لدينا، وهم يعرفون ما الذي تبحث عنه نحن نقدم الأسماك الطازجة والمأكولات البحرية مباشرة إلى الباب الخاص بك. متجر اسماك  على شبكة الإنترنت، يسمح لك أن تأمر بسرعة وبشكل آمن. للأسماك والمأكولات البحرية
+</string>
+    <string name="many_cities_soon">باقي المدن قريبا</string>
+
+    <string name="ok">موافق</string>
+
+    <string name="visa_available">هناك جهاز سحب من بطاقات الصراف الالي</string>
+    <string name="delivery_12_hours"> التوصيل عادة يكون خلال 12 ساعة</string>
+
+    <string name="account_verified">تم تفعيل الحساب بنجاح</string>
+
+    <string name="total">الاجمالي</string>
+    <string name="delivery">رسوم توصيل</string>
+    <string name="sub_total">الاجمالي قبل الضريبة</string>
+    <string name="payment_method">وسيلة الدفع</string>
+    <string name="payment_mada">مدى / فيزا</string>
+    <string name="payment_cash">الدفع عند الاستلام</string>
+
+    <!--    product  -->
+    <string name="perkg">للكيلو</string>
+    <string name="perpc">للقطعة</string>
+
+    <!--  order status  -->
+    <string name="payment_method_mada">مدى / فيزا</string>
+    <string name="payment_method_cash">الدفع عند الاستلام</string>
+    <string name="payment_status">حالة السداد</string>
+    <string name="payment_status_pending">قيد الانتظار</string>
+    <string name="payment_status_cancelled">ألغيت</string>
+    <string name="payment_status_paid">دفع</string>
+
+    <!--  payment error  -->
+    <string name="payment_error">فشل دفع طلبك. حاول مرة اخرى.</string>
+</resources>

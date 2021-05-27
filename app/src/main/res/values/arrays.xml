@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="unitAll">
+        <item>Per kilo</item>
+        <item>Per piece</item>
+    </string-array>
+    <string-array name="unitKilo">
+        <item>Per kilo</item>
+    </string-array>
+    <string-array name="unitPiece">
+        <item>Per piece</item>
+    </string-array>
+    <string-array name="cuttingWays">
+        <item>With cleaning</item>
+        <item>Without cleaning</item>
+        <item>For grilling</item>
+    </string-array>
+</resources>

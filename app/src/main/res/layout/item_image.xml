@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="image"
+            type="String"/>
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="onImageClickListener"
+            type="com.anas.fishday.screens.productdetails.interfaces.OnImageClickListener"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> onImageClickListener.onImageClick(image)}">
+
+        <ImageView
+            android:id="@+id/imageIv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            loadImage="@{image}"/>
+    </RelativeLayout>
+</layout>

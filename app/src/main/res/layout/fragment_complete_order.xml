@@ -1,0 +1,200 @@
+<layout>
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/completeOrderCoordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray"
+                tools:context="com.anas.fishday.screens.main.fragments.completeorder.CompleteOrderFragment">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/car_complete_order" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp">
+
+                            <EditText
+                                android:id="@+id/nameEt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:drawableStart="@drawable/user"
+                                android:hint="@string/name"
+                                android:inputType="text"
+                                android:padding="@dimen/_10sdp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp">
+
+                            <EditText
+                                android:id="@+id/mobileNumberEt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:drawableStart="@drawable/phone"
+                                android:hint="@string/mobile_number"
+                                android:inputType="number"
+                                android:padding="@dimen/_10sdp"
+                                android:text="+966" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp">
+
+                            <EditText
+                                android:id="@+id/addressEt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:drawableStart="@drawable/mail"
+                                android:hint="@string/address"
+                                android:inputType="text"
+                                android:padding="@dimen/_10sdp"
+                                android:editable="false"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp">
+
+                            <EditText
+                                android:id="@+id/notesEt"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:gravity="top"
+                                android:background="@android:color/transparent"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:hint="@string/notes"
+                                android:inputType="text"
+                                android:padding="@dimen/_10sdp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/payment_method"
+                                    android:textSize="@dimen/_15sdp"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_gravity="center"/>
+
+                                <RadioGroup
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:layout_gravity="center">
+                                    <RadioButton
+                                        android:id="@+id/visaRadioButton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/payment_mada"
+                                        android:checked="true"
+                                        android:onClick="@{onClickListener::onClick}"/>
+                                    <RadioButton
+                                        android:id="@+id/cashdeliveryRadioButton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/payment_cash"
+                                        android:onClick="@{onClickListener::onClick}"/>
+                                </RadioGroup>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <Button
+                            android:id="@+id/getCurrentAddressBtn"
+                            style="@style/TextWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:background="@drawable/rounded_bg_blue"
+                            android:onClick="@{onClickListener::onClick}"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:text="@string/get_current_address"
+                            android:textAllCaps="false" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:text="@string/visa_available"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:text="@string/delivery_12_hours"/>
+
+                        <Button
+                            android:id="@+id/completeOrderBtn"
+                            style="@style/TextWhite"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/rounded_bg_blue"
+                            android:onClick="@{onClickListener::onClick}"
+                            android:text="@string/complete_order"
+                            android:textAllCaps="false" />
+
+
+                    </LinearLayout>
+                </ScrollView>
+            </FrameLayout>
+        </ScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

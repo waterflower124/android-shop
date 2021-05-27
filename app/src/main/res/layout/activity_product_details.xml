@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="productDetailsOnClickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="productDetails"
+            type="com.anas.fishday.entities.Product" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/productDetailsCoordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolbar">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/imageViewPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"/>
+                        <com.rd.PageIndicatorView
+                            android:id="@+id/pageIndicatorView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="20dp"
+                            app:piv_animationType="slide"
+                            app:piv_dynamicCount="true"
+                            app:piv_interactiveAnimation="true"
+                            app:piv_selectedColor="@color/colorPrimary"
+                            app:piv_unselectedColor="@color/gray"
+                            app:piv_viewPager="@id/imageViewPager" />
+                        <ImageView
+                            android:id="@+id/soldoutIv"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="5dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/sold_out"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp">
+
+                            <com.github.anastr.speedviewlib.PointerSpeedometer
+                                android:id="@+id/pointerSpeedometer"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_below="@id/nameTv"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                app:sv_speedTextFormat="INTEGER"
+                                app:sv_unitTextSize="@dimen/_8ssp"
+                                app:sv_backgroundCircleColor="@color/colorPrimary"
+                                app:sv_textColor="@android:color/transparent"
+                                app:sv_unitTextColor="@android:color/transparent"
+                                app:sv_withTremble="false"
+                                android:visibility="visible"/>
+                            <TextView
+                                android:id="@+id/nameTv"
+                                style="@style/TextPrimary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{productDetails.name}" />
+
+                            <TextView
+                                android:id="@+id/descriptionTv"
+                                style="@style/TextPrimary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toStartOf="@id/pointerSpeedometer"
+                                android:layout_below="@id/nameTv"
+                                android:layout_marginTop="10dp"
+                                android:text="@{productDetails.description}"
+                                android:textColor="@color/black" />
+
+                            <LinearLayout
+                                android:id="@+id/priceKiloLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/descriptionTv"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/real_kiloPriceTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{productDetails.real_Kiloprice + ' '  + @string/sar}"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <TextView
+                                    android:id="@+id/real_kiloUnitTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="2dp"
+                                    android:text="@string/per_kg"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="@dimen/_10ssp" />
+                                <TextView
+                                    android:id="@+id/origin_kiloPriceTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="@{productDetails.origin_Kiloprice + ' '  + @string/sar}"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <TextView
+                                    android:id="@+id/origin_kiloUnitTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="2dp"
+                                    android:text="@string/per_kg"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/pricePieceLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/priceKiloLayout"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/real_piecePriceTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{productDetails.real_Pieceprice + ' ' + @string/sar}"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <TextView
+                                    android:id="@+id/real_pieceUnitTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="2dp"
+                                    android:text="@string/per_pi"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <TextView
+                                    android:id="@+id/origin_piecePriceTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="@{productDetails.origin_Pieceprice + ' ' + @string/sar}"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <TextView
+                                    android:id="@+id/origin_pieceUnitTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="2dp"
+                                    android:text="@string/per_pi"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/orderNowBtn"
+                                style="@style/TextWhite"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_below="@id/priceKiloLayout"
+                                android:layout_marginBottom="@dimen/_30sdp"
+                                android:layout_marginTop="50dp"
+                                android:background="@drawable/rounded_bg_blue"
+                                android:onClick="@{productDetailsOnClickListener::onClick}"
+                                android:text="@string/add_to_cart"
+                                android:textAllCaps="false" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
